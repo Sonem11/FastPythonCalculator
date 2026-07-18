@@ -1,28 +1,37 @@
-# Ovo je naš prvi Python projekat: jednostavan kalkulator
+# Fast Python Calculator
+# Extended version with power and square root operations.
 
-# Funkcija input() služi da korisnik unese vrednost sa tastature.
-# Funkcija float() pretvara taj unos u broj (decimalni).
-broj1 = float(input("Unesi prvi broj: "))
+import math  # math library is needed for square root
 
-# Isto radimo i za drugi broj.
-broj2 = float(input("Unesi drugi broj: "))
+# Ask the user to enter the first number.
+number1 = float(input("Enter the first number: "))
 
-# Sada pitamo korisnika koju operaciju želi da uradi.
-# Koristimo string jer unos može biti +, -, *, /
-operacija = input("Izaberi operaciju (+, -, *, /): ")
+# Ask the user to enter the second number.
+number2 = float(input("Enter the second number: "))
 
-# Sada koristimo if-elif-else da odlučimo šta da uradimo na osnovu operacije.
-if operacija == "+":
-    print("Rezultat je:", broj1 + broj2)
-elif operacija == "-":
-    print("Rezultat je:", broj1 - broj2)
-elif operacija == "*":
-    print("Rezultat je:", broj1 * broj2)
-elif operacija == "/":
-    # Dodajemo proveru da ne delimo sa nulom.
-    if broj2 != 0:
-        print("Rezultat je:", broj1 / broj2)
+# Ask the user to choose an operation.
+operation = input("Choose operation (+, -, *, /, ^, sqrt): ")
+
+# Decide which operation to perform based on the user's choice.
+if operation == "+":
+    print("Result:", number1 + number2)
+elif operation == "-":
+    print("Result:", number1 - number2)
+elif operation == "*":
+    print("Result:", number1 * number2)
+elif operation == "/":
+    if number2 != 0:
+        print("Result:", number1 / number2)
     else:
-        print("Greška: deljenje sa nulom nije dozvoljeno.")
+        print("Error: Division by zero is not allowed.")
+elif operation == "^":
+    # Power operation: number1 raised to number2
+    print("Result:", number1 ** number2)
+elif operation == "sqrt":
+    # Square root operation: only uses number1
+    if number1 >= 0:
+        print("Result:", math.sqrt(number1))
+    else:
+        print("Error: Cannot calculate square root of a negative number.")
 else:
-    print("Nepoznata operacija.")
+    print("Unknown operation.")

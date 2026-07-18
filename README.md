@@ -1,42 +1,73 @@
 # Fast Python Calculator
 
-Jednostavan i brz kalkulator napisan u Pythonu.  
-Podržava sabiranje, oduzimanje, množenje i deljenje.
+A simple and fast calculator written in Python.  
+It supports basic operations: addition, subtraction, multiplication, and division.
 
-## Kako pokrenuti
-1. Otvori CMD i idi u folder projekta:
+## Features
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/), with error handling for division by zero
+
+## Project Structure
+FastPythonCalculator/
+│
+├── calculator.py      # Main Python script
+├── README.md          # Project documentation
+├── requirements.txt   # Dependencies (currently empty)
+└── .gitignore         # Ignored files for Git
+
+Code
+
+## How to Run
+1. Open **Command Prompt (CMD)** and navigate to the project folder:
    ```bash
    cd C:\PythonProjekti\BeginnerProjects\FastPythonCalculator
-Pokreni fajl:
+Run the calculator:
 
 bash
 python calculator.py
-Primer
+Example
 Code
-Unesi prvi broj: 5
-Unesi drugi broj: 6
-Izaberi operaciju (+, -, *, /): +
-Rezultat je: 11.0
+Enter the first number: 5
+Enter the second number: 6
+Choose operation (+, -, *, /): +
+Result: 11.0
+Requirements
+Python 3.10 or higher
+
+No external libraries required for this version
+
+Future Improvements
+Add support for advanced operations (power, square root, etc.)
+
+Create a graphical user interface (GUI)
+
+Add unit tests for reliability
+
 Code
 
 ---
 
-### 🚀 Sledeći korak: GitHub upload
-Da bi projekat bio na GitHub-u:
-1. U CMD-u inicijalizuj repo:
-   ```cmd
-   git init
-Dodaj fajlove:
+## 📄 requirements.txt
+```txt
+# No external dependencies required
+📄 .gitignore
+txt
+# Ignore Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-cmd
-git add .
-Napravi prvi commit:
+# Ignore virtual environments
+venv/
+env/
 
-cmd
-git commit -m "Initial commit - Fast Python Calculator"
-Poveži sa GitHub repo-om (koji napraviš na sajtu GitHub-a):
+# Ignore IDE/editor settings
+.vscode/
+.idea/
 
-cmd
-git remote add origin https://github.com/tvojusername/FastPythonCalculator.git
-git branch -M main
-git push -u origin main
+# Ignore OS files
+.DS_Store
+Thumbs.db

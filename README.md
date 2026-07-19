@@ -17,10 +17,12 @@ It supports basic operations: addition, subtraction, multiplication, division, p
 ## Project Structure
 FastPythonCalculator/
 │
-├── calculator.py      # Main Python script
-├── README.md          # Project documentation
-├── requirements.txt   # Dependencies
-└── .gitignore         # Ignored files for Git
+├── calculator.py        # Main Python script
+├── README.md            # Project documentation
+├── requirements.txt     # Dependencies
+├── .gitignore           # Ignored files for Git
+└── tests/
+└── test_calculator.py   # Unit tests
 
 Code
 
@@ -32,12 +34,19 @@ Run the calculator:
 
 bash
 python calculator.py
-Example
+Running Tests
+To verify that all calculator functions work correctly, run the unit tests:
+
+bash
+python -m unittest discover tests
+Expected output:
+
 Code
-Enter the first number: 90
-Enter the second number: 0
-Choose operation (+, -, *, /, ^, sqrt, sin, cos, tan): sin
-Result: 1.0
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK
 Requirements
 Python 3.10 or higher
 
@@ -48,32 +57,4 @@ Add support for logarithms and exponential functions
 
 Create a graphical user interface (GUI)
 
-Add unit tests for reliability
-
-Code
-
----
-
-## 📄 requirements.txt
-```txt
-# Standard Python library only
-# No external dependencies required
-📄 .gitignore
-txt
-# Ignore Python cache and temporary files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Ignore virtual environments
-venv/
-env/
-
-# Ignore IDE/editor settings
-.vscode/
-.idea/
-
-# Ignore OS files
-.DS_Store
-Thumbs.db
+Add more unit tests for reliability
